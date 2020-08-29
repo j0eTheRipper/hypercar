@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hypercar Service Center</title>
+</head>
+<body>
+<ul>
+    {% for info in menu.values %}
+    <li>
+        <a href="{{ info.0 }}">{{ info.1 }}</a>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

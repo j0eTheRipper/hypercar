@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hypercar Service Center</title>
+</head>
+<body>
+{% for name, length in line.items %}
+<div>{{ name }}: {{ length }}</div>
+{% endfor %}
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Process next</button>
+</form>
+</body>
+</html>
