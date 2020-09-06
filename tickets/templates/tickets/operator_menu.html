@@ -5,11 +5,11 @@
     <title>Hypercar Service Center</title>
 </head>
 <body>
-{% for name, length in line.items %}
-<div>{{ name }}: {{ length }}</div>
+{% for name, queue in line.items %}
+<div>{{ name }}: {{ queue | length }}</div>
 {% endfor %}
 
-<form method="post">
+<form method="post" action="/processing">
     {% csrf_token %}
     <button type="submit">Process next</button>
 </form>
